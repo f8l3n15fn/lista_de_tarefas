@@ -1,10 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import './TodoList.css'
 
 function TodoList(){
 
-    const [lista, setLista] = useState([]);
+    const listaStorage = localStorage.getItem('lista');
+
+    const [lista, setLista] = useState(listaStorage ? JSON.parse(listaStorage) : []);
     const [novoItem, setNovoItem] = useState("");
+
+    useEffect( ()=>{
+        localStorage.setItem('lista', JSON.stringify(lista) ); 
+    }, [lista] )
 
     function adicionaItem(form){
         form.preventDefault();
