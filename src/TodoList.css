@@ -108,7 +108,7 @@ button.deleteAll{
     padding: 15px;
     display: flex;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 0px;
     cursor: pointer;
     border-radius: 5px;
     font-weight: bold;
@@ -129,7 +129,7 @@ button.deleteAll:hover{
         width: 100%;
     }
     .listaTarefas{
-        width: 100%;
+        width: 90%;
     }
     button.del{
         background-color: #ff004c;
