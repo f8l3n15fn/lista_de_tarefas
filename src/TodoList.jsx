@@ -71,9 +71,16 @@ function TodoList(){
                     ))
                     }
                 </div>
+                
                 {
-                    lista.length > 0 && 
-                    <button onClick={()=>{deletAll()}} className="deleteAll">Deletar Todas</button>
+                    lista.length > 0 
+                    ?
+                    <div>               
+                        <p className="tip">Você pode pressionar uma tarefa para marca-la ou desmarca-la</p>
+                        <button onClick={()=>{deletAll()}} className="deleteAll">Deletar Todas</button>        
+                    </div>
+                    :
+                    console.log("")
                 }
             
             </div>
