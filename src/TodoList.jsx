@@ -9,7 +9,6 @@ function TodoList(){
     function adicionaItem(form){
         form.preventDefault();
         if (!novoItem){
-            alert("vazio")
             return;
         }
         setLista([...lista, {text: novoItem, isCompleted: false }]);
