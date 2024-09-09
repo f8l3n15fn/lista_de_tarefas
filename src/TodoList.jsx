@@ -31,8 +31,13 @@ function TodoList(){
 
     function deleta(index){
         const listaAux = [...lista];
-        listaAux.splice(index, 1);
-        setLista(listaAux)
+        if(window.confirm("Quer deletar o item [" + listaAux[index].text + "]")){
+            // action you want to perform
+            listaAux.splice(index, 1);
+            setLista(listaAux)
+         }
+
+        
     }
 
     function deletAll(){
