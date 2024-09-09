@@ -126,4 +126,7 @@ button.deleteAll:hover{
     .listaTarefas{
         width: 100%;
     }
+    button.del{
+        background-color: #ff004c;
+    }
 }
